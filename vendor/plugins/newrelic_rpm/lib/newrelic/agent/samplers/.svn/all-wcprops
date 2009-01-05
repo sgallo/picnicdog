@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/agent/samplers
+END
+mongrel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/agent/samplers/mongrel.rb
+END
+cpu.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/agent/samplers/cpu.rb
+END
+memory.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/agent/samplers/memory.rb
+END

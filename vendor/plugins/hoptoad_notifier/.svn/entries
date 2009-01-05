@@ -1,0 +1,97 @@
+8
+
+dir
+232
+http://svn.picnicdog.com/picnicdog/trunk/vendor/plugins/hoptoad_notifier
+http://svn.picnicdog.com/picnicdog
+
+
+
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+50f51367-1ed3-467e-aca5-c56d45595467
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+317777e9d8890378b1808a4041964a75
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+
+tasks
+dir
+
+.gitignore
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+f5e3863f3efbb2432431197af0b17cf7
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+
+lib
+dir
+
+INSTALL
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+e395a89c56239a350100c0434ebf08b3
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+
+install.rb
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+a0e42c99dd1871e59d69931c57c6865e
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+
+README
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+04d2a8eddda3df7dd5d595542a7bfc2b
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+

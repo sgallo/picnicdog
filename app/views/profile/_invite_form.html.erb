@@ -1,0 +1,29 @@
+<% form_remote_tag :url => {:action => 'send_invitation' } , :complete => visual_effect(:fade, 'invite_message_box', :duration => 4.0)  do -%>
+<br>
+You have <%=  @user.profile.invite_count %> invites to give out.
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        Enter Email Address:
+                    </td>
+                    <td>
+                        <%= text_field_tag "email_invite", nil, {:size => 40} %>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">
+                       
+                    </td>
+                    <td align="right">
+                         <%= submit_tag "Send Invite" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<% end %>

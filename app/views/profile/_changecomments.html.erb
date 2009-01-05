@@ -1,0 +1,44 @@
+	<div class="setting_heading">
+    &nbsp;&nbsp;Comment Notification
+</div>
+
+
+<div id="comment_error" class="error_box" style="display:none; ">
+                         </div>
+
+<% form_remote_tag :url => {:action => 'update_comments' }, :complete => visual_effect(:fade, 'comment_error', :duration => 4.0)  do -%>
+
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>Check to disable notifcation of comments and replies
+                        <% if @user.profile.send_comments == 1 %>
+                          <%= check_box_tag "comments" ,'', true %>
+                        <% else %>
+                          <%= check_box_tag "comments" %>
+                        <% end %>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                      
+                    </td>
+                  </tr>
+                <tr>
+                    <td align="right">
+                         <%= submit_tag "Update Comment Settings" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+              
+<% end %>
+
+
+
+

@@ -1,0 +1,34 @@
+
+<div id="following">
+  <div class="list_background">
+    <br>
+    <center>
+    <div class="friends_top">
+    <table width="100%">
+    <tr>
+    <td>
+      <span style="font-size: 20px;"><%= group.name %></span></a>&nbsp;  <font style="font-size: 10px; font-weight: bold;">Members(<%= group.members_count %>) - </font><%= link_to "View", group %>
+    </td>
+    <td>
+      <div id="joining_box_<%= group.id %>" class="follow_link"> <%= image_tag "indicator.gif", :style => "display:none", :id => "indicator_#{group.id}" %><%= render :partial => "joining", :locals => {:group => group}  %></div>
+    </td>
+    </tr>
+    </table>
+        <div class="friends_what">
+         
+        </div>
+        <table>
+            <tr>
+              <td>
+                <div style="font-family:Tahoma;font-size:17px;">
+                    <%= group.description %>
+                </div>
+             </td>
+            </tr>
+        </table>
+        <br />
+    </div>
+    </center>
+    <br>
+  </div>
+</div>

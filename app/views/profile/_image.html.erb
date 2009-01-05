@@ -1,0 +1,37 @@
+	<div class="setting_heading">
+    &nbsp;&nbsp;Change your profile image
+</div>
+<% form_for :profile, @profile, :url => {:action => "update_mug"}, :html => {:multipart => true} do |f| %>
+
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td valign="top" >
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        Image:
+                    </td>
+                    <td>
+                        <%= f.file_field "image" %>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                    </td>
+                    <td align="right">
+                       
+                        <%= submit_tag  "Update" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+		<td>
+			<!--<% if (@profile.location != nil) %> 
+			<img src="/mugs/<%= @profile.image_location %>"> 
+			<% end %>-->
+		</td>
+    </tr>
+</table>
+<% end %>
+

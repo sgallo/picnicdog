@@ -1,0 +1,74 @@
+
+
+<%= render :partial => "accounts/user_profile_box", :locals => {:user => @meal.user} %>
+<br><br>
+<table>
+  <tr>
+    <td valign="top">
+      <img src="/images/basket.gif" />
+    </td>
+    <td>
+      <div class="meal_body">
+        <a href="/bark/show/<%= @meal.id %>"><span style="font-size: 22px; font-family: Arial; font-weight:lighter" ><%= @meal.meal_type %></span></a><br>
+        <a href="/bark/show/<%= @meal.id %>"><%= @meal.post %></a>
+        <div class="second_row_post">Posted <%= time_ago_in_words(@meal.created_at) %> ago on <%= DateTime.parse(@meal.created_at.inspect).strftime("%m/%d/%Y at %I:%M%p") %> </div>
+      </div>
+      <div style="margin-left: 20px;">
+        <table><tr>
+            <td><img src="/images/comment_small.gif" /><a href="/bark/show/<%= @meal.id %>">Comments (<%= @meal.number_of_comments %>)</a></td>
+      </tr></table></div>
+    </td>
+</tr></table>
+
+
+<a href="#" onclick="$('recipe_builder').toggle();">Recipe Builder</a>
+<br>
+<div style="border: solid thin;" id="recipe_builder">
+  <div class="home_top">                     
+    <div class="what">
+      Recipe Builder <span style="font-size: 12px">Enter a title.  Add ingredients and steps.  Submit!</span>
+      <br>
+      <%= form_remote_tag :url => { :action => 'submit_recipe', :meal_id => @meal.id } %>
+      <table>
+        <tr><td><span style="font-size: 14px">Recipe Title:</span></td><td> <%= text_field_tag "title", nil, {:size => 53} %></td></tr>
+        <tr><td><span style="font-size: 14px">Description:</span></td><td><%= text_area_tag "the_description", nil, {:cols => 40, :rows => 4, } %></td></tr>
+        <tr><td align="right" colspan="2"><%= submit_tag "Submit Recipe" %></td></tr>
+      </table>
+      
+      </form>
+      <center><div id="message_box" style="font-size: 16px; align: center; font-weight: bold; display:none;"></div></center>
+    </div>
+  </div>
+  
+  <div class="div_inner">
+    
+    Ingredients:
+    <div id="ingredient_box">
+      <%= render :partial => "ingredient_list" %>
+    </div>
+    Steps:
+    <div id="steps_box">
+      <%= render :partial => "recipe_steps" %>
+    </div>
+    
+    <br>
+    
+    <%= form_remote_tag :url => { :action => 'add_ingredient', :meal_id => @meal.id, :ingredient_list => @ingredient_list}, :html => { :id => 'ingredient' } %>
+    <%= text_field_tag "the_ingredient", nil, {:size => 52} %>
+    <%= submit_tag "Add Ingredient" %>
+    </form>
+    
+    <%= form_remote_tag :url => { :action => 'add_recipe_step', :meal_id => @meal.id, :recipe_steps => @recipe_steps}, :html => { :id => 'step' } %>
+    <%= text_area_tag "the_step", nil, {:cols => 53, :rows => 4, } %>
+    <%= submit_tag "Add Recipe Step" %>
+    </form>
+  </div>
+  
+</div>
+
+<div id="the_recipe_list">
+  <%= render :partial => "the_recipe_list" %>
+
+</div>
+
+

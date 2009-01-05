@@ -1,0 +1,54 @@
+<br/>
+<table>
+    <tr>
+        <td>
+          <div class="home_top">
+            <div class="what">What did you eat?</div>
+            <br />
+            <table>
+              <tr>
+                <td colspan="2">
+                <%= form_tag "/bark/edit" %>
+                <select id="meal_the_type" name="meal[the_type]">
+
+                  <option <% if @meal.meal_type == "Breakfast" %>
+                     <%= "selected='selected'" %>
+                    <% end %>>Breakfast</option>
+
+                  <option <% if @meal.meal_type == "Brunch" %>
+                    <%= "selected='selected'" %>
+                    <% end %>>Brunch</option>
+
+                  <option <% if @meal.meal_type == "Lunch" %>
+                    <%= "selected='selected'" %>
+                    <% end %>>Lunch</option>
+
+                  <option <% if @meal.meal_type == "Dinner" %>
+                    <%= "selected='selected'" %>
+                    <% end %>>Dinner</option>
+                    
+                  <option <% if @meal.meal_type == "Snack" %>
+                    <%= "selected='selected'" %>
+                    <% end %>>Snack</option>
+                    
+                </select>
+                <%= calendar_date_select_tag "meal_date", @meal.created_at %>
+                  <br>
+                  <%= text_area "meal", "the_post", {:onKeyDown => "check_length(this.id);",
+                      :onKeyUp => "check_length(this.id);", :class => "food_box",
+                      :value => @meal.post} %>
+                </td>
+               </tr>
+              <tr><td>
+                  <input size="1" value="200" id="text_num" style="width:25px">
+                  </td>
+                  <td align="right"><%= submit_tag "Bark", {:style => "width:100px;"} %></td>
+                  <input type="hidden" name="id" value="<%=@meal.id%>">
+                  </form>
+                  </tr>
+            </table>
+          </div>
+        </td>
+    </tr>
+</table>
+<br/>

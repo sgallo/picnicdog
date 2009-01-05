@@ -1,0 +1,40 @@
+8
+
+dir
+232
+http://svn.picnicdog.com/picnicdog/trunk/vendor/plugins/hoptoad_notifier/lib
+http://svn.picnicdog.com/picnicdog
+
+
+
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+50f51367-1ed3-467e-aca5-c56d45595467
+
+hoptoad_notifier.rb
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+aadde5c03b6b1fdca8f40f353c4a3488
+2008-10-18T15:49:19.895808Z
+112
+sgallo
+

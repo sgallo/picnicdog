@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/picnicdog/!svn/ver/154/trunk/vendor/plugins/will_paginate/test/lib
+END
+activerecord_test_connector.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/picnicdog/!svn/ver/154/trunk/vendor/plugins/will_paginate/test/lib/activerecord_test_connector.rb
+END
+activerecord_test_case.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/picnicdog/!svn/ver/154/trunk/vendor/plugins/will_paginate/test/lib/activerecord_test_case.rb
+END
+view_test_process.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/picnicdog/!svn/ver/154/trunk/vendor/plugins/will_paginate/test/lib/view_test_process.rb
+END
+load_fixtures.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/picnicdog/!svn/ver/154/trunk/vendor/plugins/will_paginate/test/lib/load_fixtures.rb
+END

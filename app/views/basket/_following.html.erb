@@ -1,0 +1,8 @@
+
+<% if @user != current_user %>
+  <% if @following %>
+     <%= link_to_remote "Stop Following", :url => {:action => "stop_following", :follow_user => @user.id }, :html => {:style => "color:#0099CC; font-size:14px; text-decoration: underline;"} %>
+  <% else %>
+     <%= link_to_remote "Follow", :url => {:action => "follow", :follow_user => @user.id, }, :html => {:style => "color:#0099CC; font-size:14px; text-decoration: underline;"} %>
+  <% end %>
+<% end %>

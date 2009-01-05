@@ -1,0 +1,9 @@
+
+ <%= render :partial => "user_profile_box", :locals => {:user => @user} %>
+<br />
+<%= render :partial => "user_list" %>
+
+
+  <%= will_paginate @meals, :class => 'picnic_pagination' %>
+
+

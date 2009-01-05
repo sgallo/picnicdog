@@ -1,0 +1,60 @@
+<div id="rating_list">
+
+  <% if @rating == nil %>
+    <%= form_remote_tag :url => { :action => 'add_rating', :meal_id => @meal.id }, :html => { :id => 'rating'} %>
+    <table>
+      <tr>
+        <td><font style="font-size: 12px;">Health (1-10):</font></td>
+        <td><font style="font-size: 12px;">Taste (1-10):</font></td>
+        <td rowspan="2" valign="bottom"><%= submit_tag "Submit Health and Taste Rating" %></td>
+      </tr>
+      <tr>
+        <td>
+          <select name="post[rating_list]">
+            <option value="1">1 - Fat Maker </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5 - Average</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10 - Healthy</option>
+          </select>
+        </td>
+        <td>
+          <select name="post[tasting_list]">
+            <option value="1">1 - Gross</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5 - Average</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10 - Gourmet</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    </form>
+  <% else %>
+    <table>
+      <tr><td width="100px"><font style="font-size:13px;font-weight:bold;">YOU RATED:</font></td><td width="20"></td><td>HEALTHY:</td><td><%= @rating.rating %></td><td width="20"></td><td>TASTE:</td><td><%= @tasting.tasting %></td></tr>
+    </table>
+  <% end %>
+  <div id="rating_error" style="display:none; font-size: 12px; color: Red;"></div>
+  <% @reviews = taste_and_ratings(@meal.id) %>
+
+
+  <% if @reviews != nil && @reviews.size != 0 %>
+    <table>
+      <tr><td width="100px"><font style="font-size:13px;font-weight:bold;">OTHERS RATED:</font></td></tr>
+      <% @reviews.each do |review| %>
+        <tr><td><font style="font-size:13px;font-weight:bold;"><%= review[:name] %></font></td><td width="20"></td><td>HEALTHY:</td><td><%= review[:rating] %></td><td width="20"></td><td>TASTE:</td><td><%= review[:tasting] %></td></tr>
+      <% end %>
+    </table>
+  <% end %>
+</div>

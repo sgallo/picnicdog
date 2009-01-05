@@ -1,0 +1,44 @@
+	<div class="setting_heading">
+    &nbsp;&nbsp;Make account private
+</div>
+
+
+<div id="private_error" class="error_box" style="display:none; "> 
+                         </div>
+
+<% form_remote_tag :url => {:action => 'update_private' }, :complete => visual_effect(:fade, 'private_error', :duration => 4.0)  do -%>
+
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>Check the box to make account private
+                        <% if @user.profile.private == true %>
+                          <%= check_box_tag "private" ,'', true %>
+                        <% else %>
+                          <%= check_box_tag "private" %>
+                        <% end %>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                      <blockquote><font size="2">Making your account private will not allow others to see your friends or the foods they've eaten.</font></blockquote> 
+                    </td>
+                  </tr>
+                <tr>
+                    <td align="right">
+                         <%= submit_tag "Update Privacy Settings" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+              
+<% end %>
+
+
+
+

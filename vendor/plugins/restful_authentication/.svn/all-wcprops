@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/picnicdog/!svn/ver/1/trunk/vendor/plugins/restful_authentication
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/picnicdog/!svn/ver/1/trunk/vendor/plugins/restful_authentication/Rakefile
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/picnicdog/!svn/ver/1/trunk/vendor/plugins/restful_authentication/install.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/picnicdog/!svn/ver/1/trunk/vendor/plugins/restful_authentication/README
+END

@@ -1,0 +1,40 @@
+8
+
+dir
+232
+http://svn.picnicdog.com/picnicdog/trunk/vendor/plugins/newrelic_rpm/ui/views/newrelic/javascript
+http://svn.picnicdog.com/picnicdog
+
+
+
+2008-10-14T01:56:28.812838Z
+103
+sgallo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+50f51367-1ed3-467e-aca5-c56d45595467
+
+transaction_sample.js
+file
+
+
+
+
+2009-01-04T21:51:33.000000Z
+65dafa8c9d287db073cbec9134c977b6
+2008-10-14T01:56:28.812838Z
+103
+sgallo
+

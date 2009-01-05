@@ -1,0 +1,28 @@
+
+
+<p>
+  <b>Code:</b>
+  <%=h @invitation.code %>
+</p>
+
+<p>
+  <b>Reciever user:</b>
+  <%=h @invitation.reciever_user_id %>
+</p>
+<p>
+  <b>Sender user:</b>
+  <%=h @invitation.sender_user_id %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%=h @invitation.count %>
+</p>
+
+<p>
+  <b>Reciever Email:</b>
+  <%=h @invitation.reciever_email %>
+</p>
+
+<%= link_to 'Edit', edit_invitation_path(@invitation) %> |
+<%= link_to 'Back', invitations_path %>

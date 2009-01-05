@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic
+END
+agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/agent.rb
+END
+local_environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/local_environment.rb
+END
+noticed_error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/noticed_error.rb
+END
+shim_agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/shim_agent.rb
+END
+stats.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/stats.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/version.rb
+END
+transaction_sample.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/transaction_sample.rb
+END
+metric_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/lib/newrelic/metric_data.rb
+END

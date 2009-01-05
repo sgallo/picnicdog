@@ -1,0 +1,73 @@
+--- 
+invitations_001: 
+  reciever_user_id: 
+  updated_at: 2008-06-12 20:40:03
+  reciever_email: ""
+  code: "123459"
+  id: "1"
+  count: "8"
+  sender_user_id: 
+  created_at: 2008-04-24 00:17:07
+invitations_002: 
+  reciever_user_id: 
+  updated_at: 2008-06-13 02:07:45
+  reciever_email: 
+  code: 3833a2f9a7792dbc4cdc18bcf3cf84ae075c2bc1
+  id: "2"
+  count: "1"
+  sender_user_id: "1"
+  created_at: 2008-06-13 02:07:45
+invitations_003: 
+  reciever_user_id: 
+  updated_at: 2008-06-13 12:02:28
+  reciever_email: 
+  code: 7e43fa7fa8c6b8939808f2bdb3c66f255e38fb81
+  id: "3"
+  count: "1"
+  sender_user_id: "1"
+  created_at: 2008-06-13 12:02:28
+invitations_004: 
+  reciever_user_id: 
+  updated_at: 2008-06-25 22:57:43
+  reciever_email: 
+  code: d2252f2c103a99b27b65972756f2b052c954aa0f
+  id: "4"
+  count: "0"
+  sender_user_id: "1"
+  created_at: 2008-06-25 22:46:37
+invitations_005: 
+  reciever_user_id: 
+  updated_at: 2008-07-22 13:54:38
+  reciever_email: 
+  code: 06a50264871c878f40b728839369208a1dcbf558
+  id: "5"
+  count: "1"
+  sender_user_id: "1"
+  created_at: 2008-07-22 13:54:38
+invitations_006: 
+  reciever_user_id: 
+  updated_at: 2008-07-23 03:05:44
+  reciever_email: 
+  code: 5a438781578562996d6d02d072cf7745841a0f82
+  id: "6"
+  count: "0"
+  sender_user_id: "1"
+  created_at: 2008-07-22 13:54:56
+invitations_007: 
+  reciever_user_id: 
+  updated_at: 2008-07-23 00:52:13
+  reciever_email: 
+  code: 0fa455aa95b1aa6b6b81ac3e0672e835ba8e44f3
+  id: "7"
+  count: "0"
+  sender_user_id: "1"
+  created_at: 2008-07-23 00:46:35
+invitations_008: 
+  reciever_user_id: 
+  updated_at: 2008-07-23 00:57:43
+  reciever_email: 
+  code: eceef59c2945ddb0315cdab1145dacbf05028d8c
+  id: "8"
+  count: "0"
+  sender_user_id: "1"
+  created_at: 2008-07-23 00:46:42

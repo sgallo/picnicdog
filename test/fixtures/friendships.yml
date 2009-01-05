@@ -1,0 +1,25 @@
+--- 
+friendships_001: 
+  updated_at: 2008-07-23 00:52:47
+  id: "2"
+  user_id: "4"
+  created_at: 2008-07-23 00:52:47
+  friend_id: "1"
+friendships_002: 
+  updated_at: 2008-07-23 01:02:20
+  id: "3"
+  user_id: "5"
+  created_at: 2008-07-23 01:02:20
+  friend_id: "1"
+friendships_003: 
+  updated_at: 2008-07-23 02:05:32
+  id: "4"
+  user_id: "1"
+  created_at: 2008-07-23 02:05:32
+  friend_id: "5"
+friendships_004: 
+  updated_at: 2008-07-23 18:29:24
+  id: "5"
+  user_id: "1"
+  created_at: 2008-07-23 18:29:24
+  friend_id: "6"

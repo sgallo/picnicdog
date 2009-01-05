@@ -1,0 +1,16 @@
+<h1>Admin Control Panel</h1>
+<% if flash[:notice] %>
+  <div class="error_box">
+      <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to "Emails", :action => "email" %> - <%= link_to "Users", :action => "users" %>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<%= link_to "Send System Email", :action => "mass_mail" %>

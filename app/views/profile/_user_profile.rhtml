@@ -1,0 +1,48 @@
+<% if @current_user != nil && @current_user.profile != nil %>
+<table>
+    <!--<tr>
+    <td><img src="images/profile.gif" /></td><td></td>
+    </tr>-->
+    <tr>
+        <td colspan="2">
+            <img alt="Profile Image" src="/images/profile_about.gif" />
+        </td>
+    </tr>
+    <tr>
+    <% if @current_user.profile.image_location != nil %>    
+        <td valign="top">
+                        
+            <img src="/mugs/<%=  @current_user.profile.image_location %>">
+            
+        </td>
+    <% end %>
+    <% if @current_user.profile.about != (nil || "")%>
+        <td>
+            <div style="font-family:Tahoma;font-size:13px;">
+                <%= @current_user.profile.about %>
+            </div>
+        </td>
+    </tr>
+    <% end %>
+    <% if @current_user.profile.location != (nil || "") %>
+    <tr>
+        <td>
+            <img src="/images/profile_location.gif" />
+        </td>
+        <td>
+            <%= @current_user.profile.location %>
+        </td>
+    </tr>
+    <% end %>
+    <% if @current_user.profile.location != (nil || "") %>
+    <!--<tr>
+        <td>
+            <img src="/images/profile_food.gif" />
+        </td>
+        <td>
+            <%= @current_user.profile.location %>
+        </td>
+    </tr>-->
+    <% end %>
+</table>
+<% end %>

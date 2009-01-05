@@ -1,0 +1,9 @@
+
+<% count = 1 %>
+<% session[:recipe_steps].each do |step| %>
+  <%  if step!= nil  %>
+   <%= count %>. <%= step %> <%= link_to_remote "remove", :url => {:action => "delete_step", :index => count } %> <br>
+   <% count = count + 1  %>
+  <% end %>
+<% end %> 
+

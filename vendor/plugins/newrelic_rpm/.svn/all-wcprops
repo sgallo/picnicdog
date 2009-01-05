@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/picnicdog/!svn/ver/207/trunk/vendor/plugins/newrelic_rpm
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/LICENSE
+END
+version.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/version.txt
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/install.rb
+END
+newrelic.yml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/newrelic.yml
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/README
+END

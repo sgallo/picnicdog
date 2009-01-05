@@ -1,0 +1,73 @@
+--- 
+users_004: 
+  salt: 5b02979dc030675274efaab6e6fdfdd6dfe83a6d
+  updated_at: 2008-07-24 00:01:33
+  crypted_password: 3f722a68d63bbad28b45f7337cc1ffd25627ce18
+  remember_token_expires_at: 
+  password_reset_code: 
+  id: "4"
+  remember_token: 
+  time_zone: Eastern Time (US & Canada)
+  login: test
+  created_at: 2008-07-23 00:52:13
+  email: sgallo@picnicdog.com
+users_005: 
+  salt: 64ed82c01e18549c83d8b07b779d71f3d50d7980
+  updated_at: 2008-07-23 01:03:56
+  crypted_password: ea8891da0d8fb12cc85af99655ed00d78e762503
+  remember_token_expires_at: 
+  password_reset_code: 
+  id: "5"
+  remember_token: 
+  time_zone: Eastern Time (US & Canada)
+  login: joyhgallo
+  created_at: 2008-07-23 00:57:43
+  email: joyhgallo@gmail.com
+users_006: 
+  salt: 91b1b5b2671ea550796274d99a6b29cafddeee21
+  updated_at: 2008-07-23 03:05:43
+  crypted_password: 85ec66a68a5754ec696b11a2c4ffb9fa57866f2d
+  remember_token_expires_at: 
+  password_reset_code: 
+  id: "6"
+  remember_token: 
+  time_zone: Eastern Time (US & Canada)
+  login: villaj01
+  created_at: 2008-07-23 03:05:43
+  email: joe@teamvillar.com
+users_001: 
+  salt: bf35ec8b8962eb775fba4ac0f883083541c332fb
+  updated_at: 2008-08-05 00:08:34
+  crypted_password: 0dbc3f67ec1a6336944a17322da1e34bf4c0b20d
+  remember_token_expires_at: 
+  password_reset_code: 
+  id: "1"
+  remember_token: 
+  time_zone: Eastern Time (US & Canada)
+  login: sgallo
+  created_at: 2008-04-24 00:21:36
+  email: sgallo1@gmail.com
+users_002: 
+  salt: f803696abb3a92141722c83356a875dd39a81612
+  updated_at: 2008-06-12 20:40:38
+  crypted_password: 78fc18ed69f159217b1daeb4f0977b9c5dfcf37f
+  remember_token_expires_at: 
+  password_reset_code: 
+  id: "2"
+  remember_token: 
+  time_zone: Eastern Time (US & Canada)
+  login: support
+  created_at: 2008-06-12 20:40:03
+  email: support@picnicdog.com
+users_003: 
+  salt: 9569ea6206cc4bd8add7a60466d13a7bc06397b5
+  updated_at: 2008-07-23 18:32:27
+  crypted_password: af27c3ca76a640f563846a97ac3054fc6182a257
+  remember_token_expires_at: 
+  password_reset_code: 
+  id: "3"
+  remember_token: 
+  time_zone: Pacific Time (US & Canada)
+  login: techcrunch
+  created_at: 2008-06-25 22:57:43
+  email: webmaster@picnicdog.com

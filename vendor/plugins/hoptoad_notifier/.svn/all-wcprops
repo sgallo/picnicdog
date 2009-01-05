@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/picnicdog/!svn/ver/112/trunk/vendor/plugins/hoptoad_notifier
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/picnicdog/!svn/ver/112/trunk/vendor/plugins/hoptoad_notifier/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/picnicdog/!svn/ver/112/trunk/vendor/plugins/hoptoad_notifier/.gitignore
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/picnicdog/!svn/ver/112/trunk/vendor/plugins/hoptoad_notifier/INSTALL
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/picnicdog/!svn/ver/112/trunk/vendor/plugins/hoptoad_notifier/install.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/picnicdog/!svn/ver/112/trunk/vendor/plugins/hoptoad_notifier/README
+END

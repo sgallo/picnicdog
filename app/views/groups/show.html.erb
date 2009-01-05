@@ -1,0 +1,40 @@
+
+<%= render :partial => "group_box", :locals => {:group => @group} %>
+<br>
+<div id="meal_list">
+
+  <% if @meals != nil %>
+    <% @meals.each do |meal| %>
+      <table>
+        <tr>
+          <td valign="top">
+
+            <% if meal.user.profile.image_location != (nil && "") %>
+              <img src="/mugs/<%=  meal.user.profile.image_location %>">
+            <% else %>
+              <img src="/images/basket_png.png" />
+            <% end %>
+          </td>
+          <td>
+            <div class="meal_body">
+              <a href="/bark/show/<%= meal.id %>"><span style="font-size: 22px; font-family: Arial; font-weight: lighter; " ><%= meal.meal_type %> <% if meal.rating != nil %><font class="rating"> - Healthy: <%= sprintf("%01.2f", meal.rating)%> Taste: <%= sprintf("%01.2f", meal.tasting)%></font>  <% end %>   </span></a><br>
+              <a href="/bark/show/<%= meal.id %>"><%= meal.post %></a>
+              <div class="second_row_post">Posted <%= time_ago_in_words(meal.created_at) %> ago on <%= DateTime.parse(meal.created_at.inspect).strftime("%m/%d/%Y at %I:%M%p") %>  by <a href="/basket/user/<%= meal.user.login %>"><%= meal.user.name %></a> </div>
+            </div>
+            <div style="margin-left: 20px;">
+          <table><tr><!--<td><img src="/images/oven_icon.gif" /></td><td><a href="/recipe/new/<%= meal.id %> ">How would you make this? (<%= meal.number_of_recipes %>)</a></td>
+                  <td width="10"></td>-->
+                <td><img src="/images/comment_small.gif" />&nbsp;<a href="/bark/show/<%= meal.id %>">Comments & Ratings&nbsp; (<%= meal.number_of_comments %>)</a></td>
+                <td valign="top">&nbsp;<img src="/images/forkknife.gif" />&nbsp;<%= link_to "Copy & Edit", {:action => "copy", :meal_id => meal.id} %></td>
+                  </tr></table></div>
+          </td>
+        </tr>
+      </table>
+      <font style="font-size:10px; color:#666666"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+    <% end %>
+    <%= will_paginate @meals, :class => 'picnic_pagination' %>
+<% end %>
+</div>
+
+
+<center><%= link_to 'Return To Group List', groups_path %></center>

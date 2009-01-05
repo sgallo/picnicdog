@@ -1,0 +1,22 @@
+--- 
+ingredients_003: 
+  updated_at: 2008-07-23 21:15:23
+  sort_order: "3"
+  recipe_id: "1"
+  id: "3"
+  created_at: 2008-07-23 21:15:23
+  ingredient: Cheese
+ingredients_001: 
+  updated_at: 2008-07-23 21:15:23
+  sort_order: "1"
+  recipe_id: "1"
+  id: "1"
+  created_at: 2008-07-23 21:15:23
+  ingredient: Bread
+ingredients_002: 
+  updated_at: 2008-07-23 21:15:23
+  sort_order: "2"
+  recipe_id: "1"
+  id: "2"
+  created_at: 2008-07-23 21:15:23
+  ingredient: Butter

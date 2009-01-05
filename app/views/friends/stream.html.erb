@@ -1,0 +1,12 @@
+<div class="home_top">
+    <div class="what">
+      What your followees are eating..
+      <% if @profile.private == false %>
+        <%= link_to( (image_tag 'rss_big.gif', :border => "0"), "/friends/feed/#{@current_user.id}.xml" ) %>
+      <% end %>
+    </div>
+  </div>
+  <br />
+<%= render :partial => "stream_list" %>
+<%= will_paginate @meals, :class => "picnic_pagination" %>
+

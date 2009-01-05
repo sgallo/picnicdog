@@ -1,0 +1,30 @@
+<table>
+<tr>
+<td>
+  <div class="setting_heading">
+    &nbsp;&nbsp;Food Search <font style="font-size:11px">(Beta Feature)</font>
+  </div>
+  <br>
+  Enter Food:
+  <%= form_tag "/food/lookup"  %>
+  <%= text_field "search", "query", {:size => 53 } %>
+  <%= submit_tag  "Search" %>
+  </form>
+  <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div><% end %>
+  <br>
+  <% if @list != nil && @list.size != 0 %>
+    <% @list.each do |item| %>
+      <font size="2"><%= link_to_remote "Select", :url => {:action => 'select_food', :food_id => item.id} %>  <!-- <%= item.id%> <%= item.score %> --><%= item.description.gsub('"', '') %><br></font>
+    <% end %>
+    <br>
+    <%= will_paginate @list, :method => "post", :class => "picnic_pagination", :params => {:q => @q} %>
+  <% end %>
+</td>
+<td valign="top">
+  <div id="portion_list"></div>
+  <div id="nutrition_label"></div>
+</td>
+</tr>
+
+</table>
+

@@ -1,0 +1,23 @@
+<%= link_to_remote "Back to results", :url => {:action => "return_to_list"} %>
+<br />
+<font style="font-size: 13px; font-weight: bold;">
+<%= food_description.gsub('"', '') %>
+</font>
+<div id="food_error"></div>
+<%= form_remote_tag :url => {:action => "label_update", :food_id => food_id , :meal_id => meal_id},
+              :before => "Element.show('indicator')",
+              :failure => "Element.hide('indicator')",
+              :success => "Element.hide('indicator')"  %>
+<%= text_field_tag :quantity, "1", :style => "width: 20px;" %>&nbsp;x
+<%= select ("select_weight", "id", weights.map {|u| [u.msre_desc, u.id]}) %>
+<%= submit_tag "Add food to meal", :disable_with => "..."  %>
+<%= submit_tag "Show Label" %>
+
+</form>
+
+<%= 
+#observe_field(:select_weight_id,
+ #     :url => { :action => :label_update, :food_id => food_id},
+ #     :frequency => 2.5,
+ #     :with => 'weight_id' )
+    %>

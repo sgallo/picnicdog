@@ -1,0 +1,20 @@
+<h1>User List Administration</h1>
+
+<font style="font-size:12px;">
+<% if @users != nil %>
+  <table>
+    <th>User</th><th>Full Name</th><th>Email</th><th>Created At</th><th>SendEmail</th>
+    <% @users.each do |user| %>
+      <tr>
+      <td><%= user.login %></td>
+      <td><%= user.profile.full_name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at %></td>
+      <td><%= user.profile.send_system_email %></td>
+      </tr>
+      <tr><td colspan="5"><hr></td></tr>
+    <% end %>
+  </table>
+  </font>
+<% end %>
+<%= will_paginate @users, :class => 'picnic_pagination' %>

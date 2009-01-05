@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/test/newrelic
+END
+tc_metric_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/test/newrelic/tc_metric_spec.rb
+END
+tc_stats.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/test/newrelic/tc_stats.rb
+END
+tc_environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/picnicdog/!svn/ver/103/trunk/vendor/plugins/newrelic_rpm/test/newrelic/tc_environment.rb
+END

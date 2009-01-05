@@ -1,0 +1,32 @@
+<div class="setting_heading">
+    &nbsp;&nbsp;Contacts Search
+</div>
+<br>
+
+ <font style="font-size:13px">You can search your email contact list for users who are currently using Picnic Dog.
+ This list will only show you users who were found in Picnic Dog by there email address and those users who you are not currently
+following.</font>
+
+<br><br>
+  
+     <%= form_remote_tag :url => {:action => "contact_search" }, :before => "Element.show('indicator')",
+          :failure => "Element.hide('indicator')",
+          :success => "Element.hide('indicator')",
+          :complete => visual_effect(:fade, 'message_box', :duration => 4.0)%>
+  <table>
+    <tr><td>Your email: </td><td><%= text_field "search", "user_name", {:size => 20} %>@<select id="mail_type" name="mail[the_type]"> <option>gmail.com</option></select><br></td></tr>
+    <tr><td> Your password:</td><td><%= password_field "search", "password", {:size => 20} %> </td></tr>
+    <tr><td></td><td align="right"> <%= submit_tag  "Search", :style => "width:251px;" %></td></tr>
+
+ </table>
+  </form>
+<div id="indicator" style="display: none;">
+    <%= image_tag "indicator.gif" %> Searching ...
+</div>
+
+<div id="message_box" class="error_box" style="display:none;"></div>
+<div id="contact_search_result">
+  <%= render :partial => "contact_search_result"  %>
+</div>
+
+

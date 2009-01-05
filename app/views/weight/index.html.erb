@@ -1,0 +1,42 @@
+<div class="home_top">
+  <div class="what">Weight Manager</div>
+</div>
+<p>Enter your weight as it changes by day.  The only one who can see your actual weight is you.
+We use weight to see how affective people have rated the food you eat, and help you track if the 
+food you are eating is effective</p>
+<div id="weight_error" class="error_box" style="display:none; "> </div>
+                         
+<%= form_tag :action => 'add_weight'  %>
+      <table>
+        <tr><td><span style="font-size: 14px">Weight:</span></td><td>&nbsp;&nbsp;<span style="font-size: 14px">Date:</span></td></tr>
+        <tr><td> <%= text_field_tag "weight", nil, {:size => 10} %> lbs/kg</td><td>&nbsp;&nbsp;<%= date_select "date", "the_date" %></td><td align="right" colspan="2"><%= submit_tag "Submit Weight" %></td></tr>
+
+      </table>
+      
+      </form>
+<% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div><% end %>
+<table>
+  <tr>
+    <td>
+      <div id="weight_list">
+        <%= render :partial => "list"  %>
+      </div>
+
+    </td>
+    <td width="40"></td>
+    <td valign="top">
+<img src="http://chart.apis.google.com/chart?
+chs=250x200
+&cht=lc
+&chd=t:<%= @chart_data %>
+&chds=<%=@min_range%>,<%=@max_range%>
+&chm=B,76A4FB,0,0,0
+&chg=10,10
+&chxt=x,y
+&chxr=0,<%=@days%>,1|1,<%=@min_range%>,<%=@max_range%>"
+alt="Weight Chart" />
+    </td>
+  </tr>
+</table>
+
+

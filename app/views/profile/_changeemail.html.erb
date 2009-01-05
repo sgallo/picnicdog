@@ -1,0 +1,41 @@
+	<div class="setting_heading">
+    &nbsp;&nbsp;Change your email address
+</div>
+
+
+<div id="email_error" class="error_box" style="display:none; "> 
+                         </div>
+
+<% form_remote_tag :url => {:action => 'update_email' }, :complete => visual_effect(:fade, 'email_error', :duration => 4.0) do -%>
+
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        New Email Address:
+                    </td>
+                    <td>
+                        <%= text_field_tag "email", nil, {:size => 40, :value => @user.email} %>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">
+                       
+                    </td>
+                    <td align="right">
+                         <%= submit_tag "Update Email" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+              
+<% end %>
+
+
+
+

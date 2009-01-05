@@ -1,0 +1,75 @@
+<br><br>
+<center><a href="/" border="0"><img src="/images/pd_logo.png" border="0" style="margin-bottom: 20px;" /></a></center>
+<div id="plain_wrapper">
+<div class="pad2">
+
+<div id="password_form">
+
+<div class="setting_heading">
+    &nbsp;&nbsp;Create a new account
+</div>
+<%= error_messages_for :user %>
+<% form_for :user, :url => {:action => "create" } do |f| -%>
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        Login:
+                    </td>
+                    <td>
+                        <%= f.text_field :login %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <%= f.text_field :email %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <%= f.password_field :password %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password:
+                    </td>
+                    <td>
+                        <%= f.password_field :password_confirmation %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Timezone:
+                    </td>
+                    <td>
+                        <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones %>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                       
+                    </td>
+                    <td align="right">
+                      <%= submit_tag "Sign Up" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<% end -%>
+</div><br>
+<div id="message_box"></div>
+</div>
+</div>

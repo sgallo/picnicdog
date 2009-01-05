@@ -1,0 +1,25 @@
+<div id="search_list">
+  <% if @food_list != nil && @food_list.size != 0 %>
+    <font size="2">
+      <table cellpadding="0" cellspacing="0">
+        <% @food_list.each do |item| %>
+          <tr>
+            <td valign="top"><%= link_to_remote "Select", :url => {:action => 'select_food', :food_id => item.id, :meal_id => meal_id} %> <!--<%= item.id%> <%= item.score %> --></td>
+            <td width="10"></td>
+            <td><%= item.description.gsub('"', '') %></td>
+          </tr>
+          <tr><td colspan="3"><hr></td></tr>
+        <% end %>
+      </table>
+    </font>
+  <%= will_paginate @food_list, :class => "picnic_pagination", :renderer => 'RemoteLinkRenderer' , :params => {:q => @q, :meal_id => meal_id}, :remote => {:q => @q, :before => "Element.show('indicator')",
+	  :failure => "Element.hide('indicator')",
+	  :success => "Element.hide('indicator')"} %>
+  <% else %> 
+    <font style="font-size: 12px">No foods were found for your search</font>
+  <% end %>
+</div>
+<div id="portion_list">
+</div>
+<div id="nutrition_label">
+</div>

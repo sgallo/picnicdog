@@ -1,0 +1,85 @@
+<% if !nut_list.empty? %>
+<font style="font-size: 12px">
+  <table bgcolor="#F0F0F0" width="250" cellpadding="3" cellspacing="2" border="0" style="border: 2px solid #857562;">
+    <tr>
+      <td>
+        <span class="facts_header">Nutrition Facts</span><br>
+          <!--
+         <span>
+           Serving Size: 1 tbsp
+         </span>-->
+          
+
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr><td colspan="2"><hr color="black" size="7"></td></tr>
+
+          <tr><td colspan="2" class="facts_main">Amount per Serving</td></tr>
+          <tr><td colspan="2"><hr color=black size=1></td></tr>
+          <tr><td colspan="2" width="100%">
+              <table border="0" width="100%">
+                <tr>
+                  <td align="left"><span style="font-size: 9px;" class="facts_main">Calories</span> <%= sprintf(" %01.#{nut_list["ENERC_KCAL"].decimal}f", nut_list["ENERC_KCAL"].value) %></td>
+                  <td align="right" style="font-size:9px;"></td>
+
+                </tr>
+                <tr>
+                  <td align="left"><span style="font-size: 9px;" class="facts_main">Kilojoules</span> <%= sprintf(" %01.#{nut_list["ENERC_KJ"].decimal}f", nut_list["ENERC_KJ"].value) %></td>
+                  <td align="right" style="font-size:9px;"></td>
+
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td colspan="2"><hr color=black size=6></td></tr>
+          <tr><td colspan="2" align="right"><b>% Daily Value *</b></td></tr>
+          <tr><td><span class="facts_main">Total Fat<span> <%= sprintf(" %01.#{nut_list["FAT"].decimal}f", nut_list["FAT"].value) %><%= nut_list["FAT"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["FAT"].value*1.545) %>%</td></tr>
+
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Saturated Fat&nbsp;  <%= sprintf(" %01.#{nut_list["FASAT"].decimal}f", nut_list["FASAT"].value) %><%= nut_list["FASAT"].units %></td><td align="right"class="facts_main"><%= sprintf(" %01.f", nut_list["FASAT"].value*5) %>%</td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Monounsaturated Fat&nbsp; <%= sprintf(" %01.#{nut_list["FAMS"].decimal}f", nut_list["FAMS"].value) %><%= nut_list["FAMS"].units %></td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Polyunsaturated Fat&nbsp;<%= sprintf(" %01.#{nut_list["FAPU"].decimal}f", nut_list["FAPU"].value) %><%= nut_list["FAPU"].units %></td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Trans Fat&nbsp;<%= sprintf(" %01.#{nut_list["FATRN"].decimal}f", nut_list["FATRN"].value) %><%= nut_list["FATRN"].units %></td></tr>
+          <tr><td><span class="facts_main">Cholesterol</span> <%= sprintf(" %01.#{nut_list["CHOLE"].decimal}f", nut_list["CHOLE"].value) %><%= nut_list["CHOLE"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["CHOLE"].value*3) %>%</td></tr>
+          <tr><td><span class="facts_main">Sodium</span><%= sprintf(" %01.#{nut_list["NA"].decimal}f", nut_list["NA"].value) %><%= nut_list["NA"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["NA"].value*0.038) %>%</td></tr>
+
+          <tr><td><span class="facts_main">Potassium</span>&nbsp;<%= sprintf(" %01.#{nut_list["K"].decimal}f", nut_list["K"].value) %><%= nut_list["K"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["K"].value*0.03) %>%</td></tr>
+          <tr><td><span class="facts_main">Total Carbohydrate</span> <%= sprintf(" %01.#{nut_list["CHOCDF"].decimal}f", nut_list["CHOCDF"].value) %><%= nut_list["CHOCDF"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["CHOCDF"].value/3.106) %>%</td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Dietary Fiber&nbsp; <%= sprintf(" %01.#{nut_list["FIBTG"].decimal}f", nut_list["FIBTG"].value) %><%= nut_list["FIBTG"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["FIBTG"].value*4) %>%</td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Sugars&nbsp; <%= sprintf(" %01.#{nut_list["SUGAR"].decimal}f", nut_list["SUGAR"].value) %><%= nut_list["SUGAR"].units %></td></tr>
+          <tr><td><span class="facts_main">Protein</span> <%= sprintf(" %01.#{nut_list["PROCNT"].decimal}f", nut_list["PROCNT"].value) %><%= nut_list["PROCNT"].units %></td><td align="right" class="facts_main"><%= sprintf(" %01.f", nut_list["PROCNT"].value*2) %>%</td></tr>
+
+          <tr><td colspan="2"><hr color="black" size="7"></td></tr>
+        </table>
+        <!--
+        <table cellpadding=0 cellspacing=0 border=0 width="100%">
+        <tr><td>Calcium &nbsp;<%= sprintf(" %01.#{nut_list["CA"].decimal}f", nut_list["CA"].value) %><%= nut_list["CA"].units %></td><td align="right" class="facts_main">10%</td></tr>
+        <tr><td>Caffine &nbsp;<%= sprintf(" %01.#{nut_list["CAFFN"].decimal}f", nut_list["CAFFN"].value) %><%= nut_list["CAFFN"].units %></td><td align="right" class="facts_main">54%</td></tr>
+        </table>
+        -->
+        <hr color="black">
+        <!--
+        <center>
+          <span style="facts_small">
+          Est. Percent of Calories from:<br>
+          <table border="0" width="90%" align="center">
+            <tr>
+              <td align="center">
+                <b>Fat</b> 99.0% &nbsp; &nbsp;
+                <b>Carbs</b> 0.0%
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <b>Protein</b> 0.0%
+              </td>
+            </tr>
+          </table>
+          <br>
+         </center>
+         -->
+      </td>
+    </tr>
+  </table>
+</font>
+<% else %>
+<font style="font-size: 12px">Add foods to your meal by searching below</font>
+<% end %>

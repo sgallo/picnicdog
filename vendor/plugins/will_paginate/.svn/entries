@@ -1,0 +1,133 @@
+8
+
+dir
+232
+http://svn.picnicdog.com/picnicdog/trunk/vendor/plugins/will_paginate
+http://svn.picnicdog.com/picnicdog
+
+
+
+2008-12-27T03:31:50.256608Z
+207
+sgallo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+50f51367-1ed3-467e-aca5-c56d45595467
+
+test
+dir
+
+will_paginate.gemspec
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+0898dfd1a1bb231c78120c69e72b6782
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+LICENSE
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+263f4d15696c9427509f5cb2d9cce639
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+Rakefile
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+17aee3ff7f942d82f98680306f794ed4
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+README.rdoc
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+df52f9dee676f0e0f5d851d0c0200812
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+.manifest
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+1d5228970ea380ab25c1764762c479e3
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+.gitignore
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+1a66cfc20053a38c61ec627b16dc256d
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+init.rb
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+983345f3936df943a51e0cd994813cd6
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+lib
+dir
+
+CHANGELOG.rdoc
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+21da65d5163a5b50732b6faef8fbfd50
+2008-10-30T00:44:13.583457Z
+154
+sgallo
+
+examples
+dir
+

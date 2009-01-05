@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Picnic Dog</title>
+    <link>http://www.picnicdog.com</link>
+    <description>Picnic Dog - Find Healthy Tasty Food</description>
+    <language>en-us</language>
+    <ttl>40</ttl>
+    <% if @meals != nil %>
+      <% @meals.each do |meal| %>
+      <item>
+        <title><%= meal.user.name %> - <%= meal.meal_type %> - <%= meal.post %>  </title>
+        <description><%= meal.user.name %> - <%= meal.meal_type %> - <%= meal.post %></description>
+        <pubDate><%= meal.created_at %></pubDate>
+        <guid>http://localhost:3000/bark/show/<%= meal.id %></guid>
+        <link>http://localhost:3000/bark/show/<%= meal.id %></link>
+      </item>
+      <% end %>
+    <% end %>
+
+  </channel>
+
+</rss>

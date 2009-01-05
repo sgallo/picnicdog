@@ -1,0 +1,71 @@
+--- 
+tastings_002: 
+  updated_at: 2008-06-14 23:02:39
+  meal_id: "24"
+  id: "2"
+  user_id: "1"
+  tasting: "4"
+  created_at: 2008-06-14 23:02:39
+tastings_003: 
+  updated_at: 2008-06-14 23:24:28
+  meal_id: "23"
+  id: "3"
+  user_id: "1"
+  tasting: "9"
+  created_at: 2008-06-14 23:24:28
+tastings_004: 
+  updated_at: 2008-06-26 23:40:59
+  meal_id: "28"
+  id: "4"
+  user_id: "1"
+  tasting: "7"
+  created_at: 2008-06-26 23:40:59
+tastings_005: 
+  updated_at: 2008-07-22 21:55:31
+  meal_id: "35"
+  id: "5"
+  user_id: "1"
+  tasting: "7"
+  created_at: 2008-07-22 21:55:31
+tastings_006: 
+  updated_at: 2008-07-23 18:27:05
+  meal_id: "44"
+  id: "6"
+  user_id: "1"
+  tasting: "8"
+  created_at: 2008-07-23 18:27:05
+tastings_007: 
+  updated_at: 2008-07-23 19:08:10
+  meal_id: "47"
+  id: "7"
+  user_id: "1"
+  tasting: "8"
+  created_at: 2008-07-23 19:08:10
+tastings_008: 
+  updated_at: 2008-07-24 00:00:31
+  meal_id: "49"
+  id: "8"
+  user_id: "1"
+  tasting: "8"
+  created_at: 2008-07-24 00:00:31
+tastings_009: 
+  updated_at: 2008-07-24 00:01:07
+  meal_id: "49"
+  id: "9"
+  user_id: "4"
+  tasting: "5"
+  created_at: 2008-07-24 00:01:07
+tastings_010: 
+  updated_at: 2008-08-04 23:37:22
+  meal_id: "43"
+  id: "10"
+  user_id: "1"
+  tasting: "7"
+  created_at: 2008-08-04 23:37:22
+tastings_001: 
+  updated_at: 2008-06-14 23:00:11
+  meal_id: "21"
+  id: "1"
+  user_id: "1"
+  tasting: "3"
+  created_at: 2008-06-14 23:00:11

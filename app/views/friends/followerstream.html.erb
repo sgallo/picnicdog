@@ -1,0 +1,10 @@
+<div class="home_top">
+    <div class="what">
+      What your followers are eating..
+
+    </div>
+  </div>
+  <br />
+<%= render :partial => "stream_list" %>
+<%= will_paginate @meals, :class => "picnic_pagination" %>
+

@@ -1,0 +1,35 @@
+<table width="100%">
+    <tr>
+        <td valign="top">
+            <div class="setting_heading">
+                &nbsp;&nbsp;Calorie Counter
+                <font style="font-size:11px">
+                </font>
+            </div>
+            <font style="font-size:11px">
+            Search for food or ingredients to add to meal.  Each food in our database has the nutition information availabile which allows us to acurately to report your caloric and nutrient intake.
+            </font>
+            <br><br>
+            Enter Food:<%= form_remote_tag :url => {:action => "food_search", :meal_id => meal_id},
+              :before => "Element.show('indicator')",
+              :failure => "Element.hide('indicator')",
+              :success => "Element.hide('indicator')" %>
+            <%= text_field "search", "query", {:size => 53 } %>
+            <%= submit_tag  "Search" %>
+            </form>
+			<div id="indicator" style="display: none;">
+			    <%= image_tag "indicator.gif" %> Processing ...
+			</div>
+
+            <% if flash[:notice] %>
+            <div class="error_box">
+                <%= flash[:notice] %>
+            </div>
+            <% end %>
+            <br>
+            <div id="food_list" style="display: none;">
+                <%= render :partial => "food_list", :locals => {:meal_id => meal_id} %>
+            </div>
+        </td>
+    </tr>
+</table>

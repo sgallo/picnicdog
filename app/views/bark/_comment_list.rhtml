@@ -1,0 +1,81 @@
+<div id="comment_list">
+  <br />
+ 
+  <% if !@comments.empty? %>
+    <hr>
+    <table cellpadding="0">
+      <tr><td><font style="font-size:13px;font-weight:bold;">COMMENTS:</font>
+    </table>
+    <% @comments.each do |comment| %>
+
+      <table>
+      <tr>
+      <td width="18"></td>
+      <td valign="top">
+        <img src="/images/comment.gif" />
+      </td>
+      <td>
+      <div class="meal_body">
+        <%= comment.the_comment %>
+        <div class="second_row_post">Posted <%= time_ago_in_words(comment.created_at) %> ago on <%= DateTime.parse(comment.created_at.inspect).strftime("%m/%d/%Y at %I:%M%p") %> by  <a href="/basket/user/<%= comment.user.login %>"><%= comment.user.name %></a>
+          <br>
+          <%= link_to_remote "Reply to Comment", :url => {:controller => "bark", :action => "show_reply_box", :comment_id => comment.id} %>
+          <div id="reply_box_<%=comment.id%>" style="display:none">
+            <%= form_remote_tag :url => { :action => 'add_reply', :comment_id => comment.id, :meal_id => @meal }, :html => { :id => 'comment'} %>
+            <table>
+              <tr>
+                <td>
+
+                  <%= text_area "reply", "the_reply", {:class => "reply_box"} %>
+                </td>
+              </tr>
+              <tr>
+                <td align="left"> <%= submit_tag "Reply to Comment", {:style => "width:415px;"} %>
+                </td>
+              </tr>
+            </table>
+            </form>
+          </div>
+          <br>
+          <% messages = comment.comment_messages %>
+          <% if messages != nil %>
+            <% messages.each do |the_message| %>
+
+
+              <table>
+                <tr>
+                  <td width="18"></td>
+                  <td valign="top">
+                    <img src="/images/reply.gif" />
+                  </td>
+                  <td>
+                    <div class="meal_body">
+                    <%=  the_message.message %>
+                    <div class="second_row_post">Posted <%= time_ago_in_words(the_message.created_at) %> ago on <%= DateTime.parse(the_message.created_at.inspect).strftime("%m/%d/%Y at %I:%M%p") %> by  <a href="/basket/user/<%= the_message.user.login %>"><%= the_message.user.name %></a>
+                  </td>
+                  <br>
+                </tr>
+              </table>
+
+
+
+
+              <br><br>
+            <% end %>
+          <% end %>
+
+
+
+        </div>
+        <br />
+      </div>
+
+      </td>
+      </tr>
+      </table>
+      <br />
+
+
+    <% end %>
+  <% end %>
+</div>

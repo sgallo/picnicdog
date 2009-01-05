@@ -1,0 +1,57 @@
+<div class="setting_heading">
+  &nbsp;&nbsp;Recipe Search
+</div>
+<br>
+
+Enter food description (example: Grilled Cheese):
+<%= form_tag "/search/recipe" %>
+<%= text_field "search", "query", {:size => 53 } %>
+<%= submit_tag  "Search" %>
+</form>
+
+ <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div><% end %>
+
+<div id="recipe_search_result">
+  <% if @recipe_search_result != nil && @recipe_search_result.size != 0  %>
+
+
+    <br>Recipe Search Results:<br>
+
+    <% @recipe_search_result.each do |recipe|%>
+
+      <hr>
+      <table>
+        <tr>
+          <td>
+            <div class="meal_body">
+              <span style="font-size: 24px; font-family: Arial; font-weight:bolder;"><%= recipe.title %></span><br>
+              <%= recipe.description %>
+              <div class="second_row_post">Posted <%= time_ago_in_words(recipe.created_at) %> ago by  <a href="/basket/user/<%= recipe.user.login %>"><%= recipe.user.name %></a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><div class="meal_body"><img src="/images/ingredient.gif">&nbsp;<span style="font-size: 18px; font-family: Arial; font-weight:lighter" >Ingredients</span></div></td>
+        </tr>
+        <% recipe.ingredients.each do |ingredient| %>
+          <tr><td><div class="meal_body"><blockquote><%= ingredient.sort_order %>.  <%= ingredient.ingredient %></blockquote></div></td></tr>
+        <% end  %>
+        <tr>
+          <td><div class="meal_body"><img src="/images/green_mixer.jpg">&nbsp;<span style="font-size: 18px; font-family: Arial; font-weight:lighter" >Steps</span></div></td>
+        </tr>
+        <% recipe.recipe_steps.each do |step| %>
+          <tr><td><div class="meal_body"><blockquote><%= step.sort_order %>.  <%= step.step %></blockquote></div> </td></tr>
+        <% end %>
+      </table>
+      <%= will_paginate @recipe_search_result, :class => "apple_pagination", :params => {:q => @q} %>
+
+    <% end %>
+
+
+  <% end %>
+
+
+
+
+</div>
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Food Conversation Without The Table.</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Track what you eat and converse with others who eat like you." />
+  <meta name="keywords" content="Food, diet, cooking, recipes, networking" />
+  <meta name="author" content="AgileOutfitters" />
+  <meta name="copyright" content="" />
+  <%= javascript_include_tag "swfobject" %>
+  <%= javascript_include_tag "anylink" %>
+
+<script language=JavaScript>
+<!--
+function check_length(my_text)
+{
+maxLen = 200; // max number of characters allowed
+if (document.getElementById(my_text).value.length >= maxLen) {
+// Alert message if maximum limit is reached.
+// If required Alert can be removed.
+var msg = "You have reached your maximum limit of characters allowed";
+//alert(msg);
+// Reached the Maximum length so trim the textarea
+document.getElementById(my_text).value = document.getElementById(my_text).value.substring(0, maxLen);
+document.getElementById('text_num').value = maxLen - document.getElementById(my_text).value.length;
+}
+else{ // Maximum length not reached so update the value of my_text counter
+document.getElementById('text_num').value = maxLen - document.getElementById(my_text).value.length;}
+}
+
+function doClear(value)
+{
+  document.getElementById(value).value = "";
+}
+//-->
+</script>
+
+  <%= stylesheet_link_tag 'site' %>
+  <%= stylesheet_link_tag 'anylink' %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body background="/images/palm_background.jpg">
+
+  <div id="top_banner">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td><a href="/"><img src="/images/top_banner_logo2.gif" alt="Picnic Dog"  border="0"/></a></td>
+        <td><%= render :partial => 'layouts/menu' %></td>
+        </tr>
+    </table>
+  </div>
+  <br><br>
+  <div class="main_center">
+    <table>
+      <tr>
+        <td valign="top">
+          <div id="left_side">
+            <%= yield %>
+          </div>
+        </td>
+        <td valign="top">
+          <div id="right_side">
+                        <div id="profile_box">
+              <% if params[:controller]== "search" %>
+                <%= render :partial => "search/search_side"  %>
+              <% elsif params[:controller] == "blog" %>
+                <%= render :partial => "blog/blog_side"  %>
+              <% else %>
+                <%= render :partial => "accounts/user_profile"  %>
+              <% end %>
+            </div>
+            <br><br>
+              <table>
+              <tr><td alight="right" style="width:400px;">
+                <script type="text/javascript"><!--
+                google_ad_client = "pub-0249326289191206";
+                /* 300x250, created 10/29/08 */
+                google_ad_slot = "8245835837";
+                google_ad_width = 300;
+                google_ad_height = 250;
+                //-->
+                </script>
+                <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+              </td></tr>
+            </table>
+            <table>
+              <tr>
+              <td>
+                <script type="text/javascript"><!--
+                    google_ad_client = "pub-0249326289191206";
+                    /* Image 160x600, created 5/31/08 */
+                    google_ad_slot = "4850825320";
+                    google_ad_width = 160;
+                    google_ad_height = 600;
+                    //-->
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                
+              </td>
+              
+              <td>
+                <script type="text/javascript"><!--
+                    google_ad_client = "pub-0249326289191206";
+                    /* Image2 160x600, created 5/31/08 */
+                    google_ad_slot = "8281294260";
+                    google_ad_width = 160;
+                    google_ad_height = 600;
+                    //-->
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+              </td>
+              </tr>
+             
+            </table>
+              <br><br>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<br>
+  <br>
+
+<div id="footer">
+<center>
+  <br><br>
+PicnicDog.com &copy;&nbsp;&nbsp;&nbsp; <a href="mailto:support@picnicdog.com">Support</a> &nbsp;&nbsp;-&nbsp;&nbsp; <a href="mailto:feedback@picnicdog.com">Give Us Your FeedBack</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://picnicdog.blogspot.com">View Our Blog</a>
+</center>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4575272-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

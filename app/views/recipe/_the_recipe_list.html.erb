@@ -1,0 +1,29 @@
+
+<% @recipes.each do |recipe| %>
+<hr>
+<table>
+  <tr>
+    <td>
+       <div class="meal_body">
+        <span style="font-size: 24px; font-family: Arial; font-weight:bolder;"><%= recipe.title %></span><br>
+        <%= recipe.description %>
+        <div class="second_row_post">Posted <%= time_ago_in_words(recipe.created_at) %> ago </div>
+       </div>
+    </td>
+   </tr>
+   <tr>
+     <td><div class="meal_body"><img src="/images/ingredient.gif">&nbsp;<span style="font-size: 18px; font-family: Arial; font-weight:lighter" >Ingredients</span></div></td>
+   </tr>
+   <% recipe.ingredients.each do |ingredient| %>
+     <tr><td><div class="meal_body"><blockquote><%= ingredient.sort_order %>.  <%= ingredient.ingredient %></<blockquote></div></td></tr>
+   <% end  %>
+   <tr>
+     <td><div class="meal_body"><img src="/images/green_mixer.jpg">&nbsp;<span style="font-size: 18px; font-family: Arial; font-weight:lighter" >Steps</span></div></td>
+   </tr>
+   <% recipe.recipe_steps.each do |step| %>
+     <tr><td><div class="meal_body"><blockquote><%= step.sort_order %>.  <%= step.step %></<blockquote></div> </td></tr>
+   <% end %>
+</table>
+<% end %>
+
+

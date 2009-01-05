@@ -1,0 +1,70 @@
+<div class="setting_heading">
+    &nbsp;&nbsp;User Search
+</div>
+<br>
+    Enter Username:
+     <%= form_tag "/search/user"  %>
+      <%= text_field "search", "query", {:size => 53 } %>
+      <%= submit_tag  "Search" %>
+    </form>
+
+<% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div><% end %>
+<br>
+
+  <div id="user_search_result">
+    
+<% if @user_search_result != nil && @user_search_result.size != 0 %>
+<div id="following">
+  <div class="list_background">
+    <br>
+  <% @user_search_result.each do |user| %>
+    <% if user.id != current_user.id %>
+      <center>
+      <div class="friends_top">
+        <div id="following_box_<%= user.id %>" class="follow_link"> <%= image_tag "indicator.gif", :style => "display:none", :id => "indicator_#{user.id}" %><%= render :partial => "following", :locals => {:user => user}  %></div>
+          <div class="friends_what">
+            <a href="/basket/user/<%= user.login %>"><span style="font-size: 18px;"><%= user.name %></span></a>
+          </div>
+          <table>
+              <tr>
+                  <% if user.profile.image_location != (nil && "") %>
+                      <td valign="top" width="98">
+
+                          <img src="/mugs/<%=  user.profile.image_location %>">
+
+                      </td>
+                  <% end %>
+                  <% if  user.profile.about != (nil && "") %>
+                  <td>
+                      <div style="font-family:Tahoma;font-size:14px;">
+                          <%= user.profile.about %>
+                      </div>
+                  </td>
+                  <% end %>
+              </tr>
+              <% if user.profile.location != nil && user.profile.location != ""  %>
+              <tr>
+                  <td>
+                      <img src="/images/profile_location.gif" />
+                  </td>
+                  <td>
+                      <span style="font-family:Tahoma;font-size:14px;"><%= user.profile.location %></span>
+                  </td>
+              </tr>
+              <% end %>
+          </table>
+          <br />
+      </div>
+      </center>
+
+<br>
+  <% end %>
+<% end %>
+
+  </div>
+</div>
+<%= will_paginate @user_search_result, :method => "post", :class => "picnic_pagination", :params => {:q => @q} %>
+<% end %>
+
+
+</div>

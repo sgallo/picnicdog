@@ -1,0 +1,89 @@
+<Br>
+<div class="sidebar_heading">
+  <a href="#">Statistics</a>
+ </div>
+<% the_user = getCurrentUser %>
+<% if the_user != nil && the_user.profile != nil %>
+
+
+ <% if the_user.profile.health_avg != 0 && the_user.profile.taste_avg != 0 %>
+  <span style="font-size: 20px; font-family: Arial; font-weight:lighter; width:100%" >People have rated your meals:<br>
+  <font class="rating">
+    Healthy:<%= sprintf(" %01.2f", the_user.profile.health_avg) %> - Tasty:  <%= sprintf(" %01.2f", the_user.profile.taste_avg) %> 
+  </font></span>
+  <% else %>
+    As people rate what you've eaten, your average score will appear here
+  <% end %>
+  <!--<a href="/weight/">Manage</a>-->
+<% end %>
+<br><br>
+
+<div class="side_links">
+<table>
+  <tr>
+    <td>Following</td><td width="8"></td><td align="center"> <a href="/friends/">(<%= Friendship.count(:all, :conditions => {:user_id => the_user.id}) %>)</a></td>
+    <td rowspan="3" ></td>
+    <td rowspan="3">
+      <% if @current_user.profile.image_location != nil %>
+        <center>
+        <img  src="/mugs/<%=  @current_user.profile.image_location %>"><br>
+          <a href="/profile">Edit Profile</a></center>
+      <% else %>
+        <center><img src="/images/default_avatar.gif"><br>
+          <a href="/profile">Edit Profile</a></center>
+
+      <% end %>
+    </td>
+  </tr>
+  <tr><td>Followers</td><td width="20"></td><td align="center"> <a href="/friends/followers">(<%= Friendship.count(:all, :conditions => {:friend_id => the_user.id}) %>)</a></td></tr>
+  <tr><td>Groups</td><td width="20"></td><td align="center"> <a href="/basket/groups">(<%= GroupMembership.count(:all, :conditions => {:user_id => the_user.id}) %>)</a></td></tr>
+</table>
+</div>
+
+<br><br>
+<% @notifications = get_activity_list(the_user.id) %>
+   
+  <% if @notifications!= nil%>
+  <div class="sidebar_heading">
+  <a href="/friends">Activity</a>
+ </div>
+    <% @notifications.each do |notification| %>
+   
+      <% if notification.o_type == "meal" %>
+        <div class="activity_list">
+          <table cellpadding="0" cellspacing="3">
+            <tr>
+              <td valign="top"><img src="/images/tinydog.gif"><td>
+
+              <td>
+                <a href="/basket/user/<%= notification.param_four %>"><%= notification.friend_name %></a> posted <%= notification.param_one %> for <a href="/bark/show/<%= notification.object_id  %>"><%= notification.param_two.downcase %></a> <%= time_ago_in_words(notification.created_at) %> ago on <%= DateTime.parse(notification.created_at.to_s).strftime("%m/%d/%Y at %I:%M%p") %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <font style="font-size:10px; color:#666666"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </font>
+      <% end %>
+      <% if notification.o_type == "comment" %>
+        <div class="activity_list">
+          <table cellpadding="0" cellspacing="3">
+            <tr>
+              <td valign="top"><img src="/images/tinydog.gif"><td>
+              <td>
+                <a href="/basket/user/<%= notification.param_four %>"><%= notification.friend_name %></a> commented
+                "<%= notification.param_two[0..140] %>"
+                on <a href="/basket/user/<%= notification.param_five %>"><%= notification.user_name %>'s</a>
+                <a href="/bark/show/<%= notification.object_id  %>"><%= notification.param_three.downcase %></a> <%= time_ago_in_words(notification.created_at) %> ago 
+              </td>
+            </tr>
+          </table>
+        </div>
+        <font style="font-size:10px; color:#666666"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </font>
+      <% end %>
+    <% end  %>
+  <% end %>
+
+
+<br>
+<% if @current_user.profile.invite_count != 0 %>
+<center><div id="invite_right_side">You still have <%=  @current_user.profile.invite_count %> <a href="/profile/#invitation">invitations</a> to give out</div></center>
+<% end %>

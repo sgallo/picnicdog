@@ -1,0 +1,55 @@
+8
+
+dir
+232
+http://svn.picnicdog.com/picnicdog/trunk/vendor/plugins/restful_authentication/generators/authenticated
+http://svn.picnicdog.com/picnicdog
+
+
+
+2008-04-20T01:53:19.729137Z
+1
+sgallo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+50f51367-1ed3-467e-aca5-c56d45595467
+
+USAGE
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+cdb2aed081ecd6e02941a4f298da3e72
+2008-04-20T01:53:19.729137Z
+1
+sgallo
+
+authenticated_generator.rb
+file
+
+
+
+
+2009-01-04T21:51:32.000000Z
+af3ae21f341cae0ce609b4ff62cd3ad2
+2008-04-20T01:53:19.729137Z
+1
+sgallo
+
+templates
+dir
+

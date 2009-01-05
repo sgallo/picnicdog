@@ -1,0 +1,40 @@
+<br/>
+<br/>
+<table>
+    <tr>
+        <td>
+            <img src="/images/basket.gif" />
+        </td>
+        <td>
+            <div class="meal_body">
+                <a href="/bark/show/<%= @meal.id %>"><span style="font-size: 22px; font-family: Arial; font-weight: lighter; "><%= @meal.meal_type %><% if @meal.rating != nil %>
+                        <font class="rating">
+                            - Healthy: <%= sprintf("%01.2f", @meal.rating) %> Taste: <%= sprintf("%01.2f", @meal.tasting) %>
+                        </font>
+                        <% end %>
+                    </span></a>
+                <br>
+                <a href="/bark/show/<%= @meal.id %>"><%= @meal.post %></a>
+                <div class="second_row_post">
+                    Posted <%= time_ago_in_words(@meal.created_at) %> ago on <%= DateTime.parse(@meal.created_at.inspect).strftime("%m/%d/%Y at %I:%M%p") %>
+                     <% if @meal.user_id == current_user.id %>
+                      &nbsp;&nbsp; <img src="/images/edit.png" />&nbsp;<%= link_to "Edit", {:controller => :bark, :action => "edit", :id => @meal.id} %>
+                     <% end %>
+                </div>
+            </div>
+            <div style="margin-left: 20px;">
+                <table>
+                    <!--<tr>
+                        <td>
+                            <img src="/images/oven_icon.gif" />
+                        </td>
+                        <td>
+                            <a href="/recipe/new/<%= @meal.id %> ">How would you make this?</a>
+                        </td>
+                    </tr>-->
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<br/>

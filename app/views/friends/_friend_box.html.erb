@@ -1,0 +1,34 @@
+<div class="friends_top">
+    <div class="friends_what">
+      <a href="/basket/user/<%= user.login %>"><span style="font-size: 18px;"><%= user.name %></span></a>
+    </div>
+    <table>
+        <tr>
+            <% if user.profile.image_location != (nil && "") %>    
+                <td valign="top" width="98">
+
+                    <img src="/mugs/<%=  user.profile.image_location %>">
+
+                </td>
+            <% end %>
+            <% if  user.profile.about != (nil && "") %>
+            <td>
+                <div style="font-family:Tahoma;font-size:14px;">
+                    <%= user.profile.about %>
+                </div>
+            </td>
+            <% end %>
+        </tr>
+		<% if user.profile.location != nil && user.profile.location != ""  %>
+        <tr>
+            <td>
+                <img src="/images/profile_location.gif" />
+            </td>
+            <td>
+                <span style="font-family:Tahoma;font-size:14px;"><%= user.profile.location %></span>
+            </td>
+        </tr>
+	    <% end %>
+    </table>
+    <br />
+</div>

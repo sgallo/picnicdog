@@ -1,0 +1,20 @@
+<center><div id="message_box" style="font-size: 16px; align: center; font-weight: bold; display:none;"></div></center>
+
+<%= form_remote_tag :url => { :action => 'submit_food' },:before => "Element.show('indicator')",
+          :failure => "Element.hide('indicator')",
+          :success => "Element.hide('indicator')" %>
+  <%= text_field_tag "submitted_food", @post, {:size => 53} %>
+  <%= submit_tag "Submit Food" %>
+</form>
+<%= form_remote_tag :url => { :action => 'submit_single_food' } ,:before => "Element.show('indicator')",
+          :failure => "Element.hide('indicator')",
+          :success => "Element.hide('indicator')"%>
+  <%= text_field_tag "submitted_food", nil, {:size => 53} %>
+  <%= submit_tag "Submit Food" %>
+</form>
+<div id="indicator" style="display: none;">
+    <%= image_tag "indicator.gif" %> Searching ...
+  </div>
+<br>
+<div id="search_list">
+</div>

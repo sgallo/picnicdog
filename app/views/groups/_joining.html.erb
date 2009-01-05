@@ -1,0 +1,7 @@
+
+<% friend = GroupMembership.find(:all, :conditions => {:user_id => current_user.id, :group_id => group.id}) %>
+<% if friend.size > 0 %>
+  <%= link_to_remote "Leave Group", :url => {:action => "leave_group", :group_id => group.id }, :html => {:style => "color:#0099CC; font-size:14px; text-decoration: underline;"} %>
+<% else %>
+  <%= link_to_remote "Join Group", :url => {:action => "join", :group_id => group.id, }, :html => {:style => "color:#0099CC; font-size:14px; text-decoration: underline;"} %>
+<% end %>

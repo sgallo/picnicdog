@@ -1,0 +1,10 @@
+
+<% count = 1 %>
+<% session[:ingredient_list].each do |ingredient| %>
+  <%  if ingredient!= nil  %>
+  
+  <%= count %>. <%= ingredient %> <%= link_to_remote "remove", :url => {:action => "delete_ingredient", :index => count} %>  <br>
+  <% count = count + 1 %>
+  <% end %>
+<% end %> 
+

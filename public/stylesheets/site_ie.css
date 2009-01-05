@@ -1,0 +1,35 @@
+
+body {
+  background-color: #FFFFFF;
+  margin: 0px;
+
+}
+
+
+  a:link { font-family: Tahoma; font-size: 10px; text-decoration: none; font-weight:bold; color:#0099CC; }
+  a:visited { font-family: Tahoma; font-size: 10px; text-decoration: none; font-weight:bold; color:#0099CC; }
+  a:active { font-family: Tahoma; font-size: 10px; text-decoration: none; font-weight:bold; color:#0099CC; }
+  a:hover { font-family: Tahoma; font-size: 10px; text-decoration: none; font-weight:bold; color:#333333; }
+
+
+#login_form {
+    position: relative;
+    top: 150px;
+    left: 10px;
+    text-align:left;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Tahoma;
+}
+
+#email_box {
+   position: relative;
+   top: 182px;
+   left: 375px;
+   text-align:left;
+   color: white;
+   font-weight: bold;
+   font-size: 15px;
+   font-family: Tahoma;
+}

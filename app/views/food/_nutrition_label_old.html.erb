@@ -1,0 +1,13 @@
+
+<%= food.description %><%= link_to_remote "Close", :url => {:action => "close_window"} %><br><br>
+<%= select ("select_portion", "id", portions.map {|u| [u.description, u.id]}) %><br>
+<div id="nutrient_list">
+  <%= render :partial => "nutrient_list", :locals => {:portion_id => portion_id, :food => food }%>
+</div>
+
+<%= observe_field(:select_portion_id,
+      :url => { :action => :portion_update},
+      :frequency => 2.5,
+      :with => 'portion'
+       ) %>
+    

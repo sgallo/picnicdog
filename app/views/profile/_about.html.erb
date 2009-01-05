@@ -1,0 +1,47 @@
+<div class="setting_heading">
+    &nbsp;&nbsp;Change your profile
+</div>
+<div id="profile_error" class="error_box" style="display:none; "></div>
+<%= form_remote_tag :url => {:action => "update_profile" }, :complete => visual_effect(:fade, 'profile_error', :duration => 4.0)  %>
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        Full Name:
+                    </td>
+                    <td>
+                        <%= text_field "profile", "full_name", {:size => 53 } %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        About:
+                    </td>
+                    <td>
+                        <%= text_area "profile", "about", {:cols => 40, :rows => 4 } %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Location:
+                    </td>
+                    <td>
+                        <%= text_field "profile", "location", {:size => 40 } %>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">
+                       
+                    </td>
+                    <td align="right">
+                         <%= submit_tag "Update" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</form>

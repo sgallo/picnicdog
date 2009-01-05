@@ -1,0 +1,16 @@
+#plain_wrapper 	{width: 450px; margin: 0px auto; padding: 0px; background: white  no-repeat; /*url(/images/top_hearts_black.png) */
+          border: 10px solid #666;}
+.pad2			{margin: 30px;}
+.hidden			{display: none;}
+input.button:hover	{background: #0099CC; }
+
+.text_login_box { width: 130px;  }
+.email_login_box { width: 180px;  }
+
+.shoot {
+  padding:5px;
+
+        border-width: 1px;
+    border-color: #CCCCCC;
+    border-style: solid;
+}

@@ -1,0 +1,16 @@
+<br>
+  <% if @weights != nil %>
+<font style="font-size:11px">
+    <table cellpadding="0">
+	  <% @weights.each do |weight| %>
+	<tr>
+	<td valign="top">Date: <%= weight.date.strftime("%m-%d-%y") %></td><td width="5"></td><td valign="top">Weight: <%= weight.weight %></td>
+    <td width="70px">&nbsp;<%= link_to "Delete", :action => "delete_weight", :weight_id => weight.id %></td>
+    <tr><td colspan="4"><hr></td></tr>
+	</tr>
+	<% end %>
+	</table>
+</font>
+<%= will_paginate @weights, :class => 'picnic_pagination' %>
+<% end %>
+

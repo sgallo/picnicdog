@@ -1,0 +1,23 @@
+
+<% if @meal.user_id != current_user.id  %>
+  <%= render :partial => "accounts/user_profile_box", :locals => {:user => @meal.user} %>
+<% end %>
+<%= render :partial => "bark_body" %>
+<hr>
+<%= render :partial => "rating_list" %>
+<hr>
+<div id="meal_nutrition_list">
+	<%= render :partial => "meal_nutrition_list", :locals => {:meal_id => @meal.id } %>
+</div>
+<hr>
+<div id="meal_nutrition_label" style="display:none">
+</div>
+
+<% if @meal.user.id == current_user.id %>
+  <br>
+  <%= render :partial => "food_search", :locals => {:meal_id => @meal.id } %>
+<% end %>
+
+<%= render :partial => "comment_list" %>
+
+<%= render :partial => "comment_form" %>

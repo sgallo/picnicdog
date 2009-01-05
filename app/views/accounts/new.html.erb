@@ -1,0 +1,54 @@
+
+
+<div class="container">
+  <img src="images/home_page_logo.gif">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+  <img src="images/prt2.jpg">
+
+  <hr>
+  <h2 class="alt">Share what you eat and always have an answer to the question, What should I eat?</h2>
+  <hr>
+  <div class="span-16 colborder">
+    <img src="images/home_splash.gif"><br><br>
+  </div>
+  <div class="span-5 last"><font style="font-size: 18px; ">Please Login</font>
+  <br><font style="color:RED;">*&nbsp;Blog Updated</font> - <a href="http://picnicdog.blogspot.com">New Features</a><br><br>
+    
+    <% form_remote_tag :url => {:action => 'new' } do -%>
+      Login:<br><%= text_field_tag 'login', "", :class => "text_login_box" %><br>
+      Password:<br><%= password_field_tag 'password', "", :class => "text_login_box" %>
+      <!--Remember me <%= check_box_tag 'remember_me' %>-->
+      <%= submit_tag 'Log in' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/accounts/forgot_password">Forgot Password</a>
+
+      <div id="login_error" style="color:red;">&nbsp;</div>
+    <% end -%>
+    <div class="span-7 last">
+      <div id="email_box">
+        <div id="email">
+          <h7 class="alt">Enter your email address and we'll send you an invite when we send our next round.</h7>
+          <%= form_remote_tag :url => { :action => 'add_email' }, :html => { :id => 'email'} %>
+          <h6>Email Address:</h6>
+          <%= text_field_tag "email", "", :class => "email_login_box" %>&nbsp;<%= submit_tag 'Submit' %>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <hr>
+  <div class="span-6 colborder">
+    <h6>The Food Social Network</h6>
+    <p>Picnic Dog is the social way to find and share what you eat.  Through a micro-blog platform users write about what they ate and perhaps where and who they were with while eating.  Food is one of the common denominators that tie everyone in the world together.  Picnic Dog will show you what the world is eating and how healthy or tasty it was as rated by the world to help you make decisions about your diet.  </p>
+  </div>
+  <div class="span-16">
+    <br>
+    <div class="span-6"><img class="shoot" src="/images/shoot1.gif"></div>
+    <div class="span-6"><img class="shoot"src="/images/nutlabel.gif"></div>
+    <div class="span-2"><img class="shoot" src="/images/shoot2.gif"></div>
+  </div>
+
+  <hr>
+  PicnicDog.com &copy;&nbsp;&nbsp;&nbsp; <a href="mailto:support@picnicdog.com">Support</a> &nbsp;&nbsp;-&nbsp;&nbsp; <a href="mailto:feedback@picnicdog.com">Give Us Your FeedBack</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://picnicdog.blogspot.com">View Our Blog</a>
+  <br><br>
+  <hr>
+</div>

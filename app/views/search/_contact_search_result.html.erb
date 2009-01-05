@@ -1,0 +1,12 @@
+
+<% if @contact_friends != nil && @contact_friends.size != 0 %>
+  <% @contact_friends.each do |contact_friend|%>
+    <% if contact_friend.friend_id == nil && contact_friend.id != current_user.id %>
+      <div id="<%= contact_friend.id %>">
+        <%=  render :partial => "accounts/user_profile_box", :locals => {:user => contact_friend} %><br>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+

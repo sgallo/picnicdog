@@ -1,0 +1,1 @@
+page.replace_html "food_list", :partial => "food_list", :local => {:meal_id => @meal_id}

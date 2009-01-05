@@ -1,0 +1,61 @@
+	<div class="setting_heading">
+    &nbsp;&nbsp;Post meals to your Twitter account
+</div>
+
+
+<div id="twitter_error" class="error_box" style="display:none; "> 
+                         </div>
+
+<% form_remote_tag :url => {:action => 'update_twitter' }, :complete => visual_effect(:fade, 'twitter_error', :duration => 4.0) do -%>
+
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        Twitter Login:
+                    </td>
+                    <td>
+                        <%= text_field_tag "twitter_username", nil, {:size => 40, :value => @user.profile.twitter_username} %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Twitter Password:
+                    </td>
+                    <td>
+                        <%= password_field_tag "twitter_password", nil, {:size => 40, :value => @user.profile.twitter_password} %>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        Send my meal posts to Twitter:
+                    </td>
+                    <td>
+                        <% if @user.profile.twitter_active == true %>
+                          <%= check_box_tag "twitter_active" ,'', true %>
+                        <% else %>
+                          <%= check_box_tag "twitter_active" %>
+                        <% end %>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">
+                       
+                    </td>
+                    <td align="right">
+                         <%= submit_tag "Update Twitter Settings" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+              
+<% end %>
+
+
+
+

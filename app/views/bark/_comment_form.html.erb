@@ -1,0 +1,19 @@
+<hr>
+<img src="/images/comment.gif" /><font style="font-size:13px;font-weight:bold;">COMMENT ON THIS MEAL:</font>
+<br/>
+<%= form_remote_tag :url => { :action => 'add_comment', :meal_id => @meal.id }, :html => { :id => 'comment'} %>
+<table>
+  <tr>
+    <td colspan="2">
+      <%= text_area "comment", "the_comment", {:class => "food_box", :onKeyDown => "check_length(this.id);", :onKeyUp => "check_length(this.id);"} %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input size="1" value="200" id="text_num">
+    </td>
+    <td align="left"> <%= submit_tag "Add Comment", {:style => "width:520px;"} %>
+    </td>
+  </tr>
+</table>
+</form>

@@ -1,0 +1,39 @@
+	<div class="setting_heading">
+    &nbsp;&nbsp;Change your Timezone
+</div>
+
+
+<div id="timezone_error" style="display:none;" class="error_box" > 
+                         </div>
+
+<% form_remote_tag :url => {:action => 'update_timezone' }, :complete => visual_effect(:fade, 'timezone_error', :duration => 4.0) do -%>
+
+<table cellspacing="0" border="0" style="border-collapse:collapse;">
+    <tr>
+        <td colspan="2">
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        Timezone:
+                    </td>
+                    <td>
+                      <select id="time_zone" name="time_zone">
+                        <%= time_zone_options_for_select(@user.time_zone,  ActiveSupport::TimeZone.us_zones) %>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                	<td align="right">
+                       
+                    </td>
+                    <td align="right">
+                         <%= submit_tag "Update Timezone" %>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+              
+<% end %>

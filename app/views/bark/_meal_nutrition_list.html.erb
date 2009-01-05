@@ -1,0 +1,31 @@
+<% if @meal_foods != nil || @meal_foods.size != nil %>
+	<table cellpadding="0">
+	<tr><td><font style="font-size:13px;font-weight:bold;">FOODS YOU'VE ADDED TO THIS MEAL:</font>
+       <%= link_to_remote "Show Meal Nutrition Label", :url => {:action => "show_meal_nutrition_label", :meal_id => meal_id },
+              :before => "Element.show('indicator_meal_foods')",
+              :failure => "Element.hide('indicator_meal_foods')",
+              :success => "Element.hide('indicator_meal_foods')" %>
+    </td></tr>
+    </table>
+      <div id="indicator_meal_foods" style="display: none;">
+      <%= image_tag "indicator.gif" %> Processing ...
+  </div>
+
+<font style="font-size:11px">
+    <table cellpadding="0">
+	<% @meal_foods.each do |food| %>
+	<tr>
+	<td valign="top"><%= food.quantity %></td><td width="5"></td><td valign="top"><%= Weight.find(food.weight_id).msre_desc %>(s)</td><td width="10"></td><td valign="top"> <%= Food.find(food.food_id).description.gsub('"', '') %></td>
+    <% if food.meal.user_id == current_user.id %>
+      <td width="70px">&nbsp;<%= link_to_remote "Remove Food", :url => {:action => "delete_meal_food", :meal_food_id => food.id, :meal_id => meal_id},
+                :before => "Element.show('indicator_meal_foods')",
+                :failure => "Element.hide('indicator_meal_foods')",
+                :success => "Element.hide('indicator_meal_foods')"   %></td>
+    <% end %>
+    <tr><td colspan="6"><hr></td></tr>
+	</tr>
+	<% end %>
+	</table>
+</font>
+<% end %>
+

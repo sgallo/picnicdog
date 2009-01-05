@@ -1,0 +1,20 @@
+<br>
+<div id="following">
+  <div class="list_background">
+    <center>
+    <% if @friends != nil && @friends.size != 0 %>
+       <br>
+        <%  @friends.each do |friend| %>
+        <% user = User.find(friend.friend_id) %>
+          <%= render :partial => "friend_box", :locals => {:user => user}  %><br>
+        <% end %>
+
+    <% else %>
+      <br><br>
+      <strong>&nbsp; Nobody....</strong>
+    <% end %>
+    </center>
+  </div>
+</div>
+
+

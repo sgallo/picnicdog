@@ -1,0 +1,26 @@
+ <div class="home_top">
+  <div class="what">What did you eat?</div>
+  <br />
+  <table>
+    <tr>
+      <td colspan="2">
+      <%= form_tag "/basket" %>
+      <select id="meal_the_type" name="meal[the_type]"> <option>Breakfast</option><option>Brunch</option><option>Lunch</option><option>Dinner</option><option>Snack</option></select>
+      <%= calendar_date_select_tag "meal_date", Date.today %>
+<br>
+      <%= text_area "meal", "the_post", {:onKeyDown => "check_length(this.id);", :onKeyUp => "check_length(this.id);", :class => "food_box"} %>
+      </td>
+     </tr>
+    <tr><td>
+        <input size="1" value="200" id="text_num" style="width:25px">
+        </td>
+        <td align="right"><%= submit_tag "Bark", {:style => "width:100px;"} %></td>
+        </form>
+
+    </tr>
+  </table>
+</div>
+  <br />
+  <br />
+  
+<%= render :partial => 'meal_list' %>

@@ -1,0 +1,10 @@
+<div class="setting_heading">
+  &nbsp;&nbsp;Followers list
+  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="$('following').toggle();"><span style="color:white;">Toggle Following</span></a>
+  &nbsp;<a href="#" onclick="$('followers').toggle();"><span style="color:white;">Toggle Followers</span></a>-->
+</div>
+
+<div id="friends_list">
+  <%= render :partial => "followers_list"  %>
+</div>
+<%= will_paginate @followers, :class => 'picnic_pagination' %>
