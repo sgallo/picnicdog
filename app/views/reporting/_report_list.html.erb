@@ -1,0 +1,8 @@
+
+<% report_list.each do |meal_hash|  %>
+  <%= render :partial => "meal_item", :locals => {:meal => meal_hash[:meal]} %>
+  <%= render :partial => "meal_foods", :locals => {:meal_foods => meal_hash[:meal_foods]} %>
+
+    <%= render :partial => "food/nutrition_label_horizontal", :locals => {:nut_list => meal_hash[:meal_nuts] } %>
+    <font style="font-size:10px; color:#666666"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<% end %>

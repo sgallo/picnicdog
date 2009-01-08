@@ -59,7 +59,7 @@ class BarkController < ApplicationController
     meal = Meal.find(params[:meal_id])
     meal_nut_list = meal.get_nutrition_label
     render :update do |page|
-      page.replace_html "meal_nutrition_label", :partial => "food/nutrition_label", :locals => {:nut_list => meal_nut_list}
+      page.replace_html "meal_nutrition_label", :partial => "food/nutrition_label_horizontal", :locals => {:nut_list => meal_nut_list}
       page.show "meal_nutrition_label"
     end
   end
@@ -69,9 +69,14 @@ class BarkController < ApplicationController
     meal = Meal.find(params[:meal_id])
     @meal_foods = meal.meal_foods
     meal_nut_list = meal.get_nutrition_label
+    meal.fat = meal_nut_list["FAT"].value
+    meal.calories = meal_nut_list["ENERC_KCAL"].value
+    meal.protein = meal_nut_list["PROCNT"].value
+    meal.carbs = meal_nut_list["CHOCDF"].value
+    meal.save
     render :update do |page|
       page.replace_html "meal_nutrition_list", :partial => "meal_nutrition_list", :locals => {:meal_id => params[:meal_id]}
-      page.replace_html "meal_nutrition_label", :partial => "food/nutrition_label", :locals => {:nut_list => meal_nut_list}
+      page.replace_html "meal_nutrition_label", :partial => "food/nutrition_label_horizontal", :locals => {:nut_list => meal_nut_list}
     end
   end
 
@@ -154,7 +159,7 @@ class BarkController < ApplicationController
       when "Add food to meal"
         nut_list = food.get_nutrients(weight, quantity)
         render :update do |page|
-          page.replace_html "nutrition_label", :partial => "food/nutrition_label", :locals => {:nut_list => nut_list}
+          page.replace_html "nutrition_label", :partial => "food/nutrition_label_horizontal", :locals => {:nut_list => nut_list}
           page.show "nutrition_label"
         end
       when "Show Label"

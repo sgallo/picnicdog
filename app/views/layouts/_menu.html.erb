@@ -1,7 +1,7 @@
 
 
 <span class="menu_link">
-<a href="/basket" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'anylinkmenu1')">BASKETS</a>
+<a href="/basket" onMouseover="dropdownmenu(this, event, 'anylinkmenu1')">BASKETS</a>
 </span>
 <div id="anylinkmenu1" class="anylinkcss" style="width: 165px;">
   <a href="/basket">My Basket</a>
@@ -14,7 +14,7 @@
 </div>
 &nbsp;&nbsp;&nbsp;
 <span class="menu_link">
-<a href="/friends" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'anylinkmenu2')">CONNECTIONS</a>
+<a href="/friends" onMouseover="dropdownmenu(this, event, 'anylinkmenu2')">CONNECTIONS</a>
 </span>
 <div id="anylinkmenu2" class="anylinkcss" style="width: 100px;">
   <a href="/friends">Following</a>
@@ -23,11 +23,16 @@
 </div>
 &nbsp;&nbsp;&nbsp;
 <span class="menu_link">
-<a href="/profile">MY PROFILE</a>
+<a href="/profile"  onMouseover="dropdownmenu(this, event, 'anylinkmenu4')">MY PROFILE</a>
 </span>
+<div id="anylinkmenu4" class="anylinkcss" style="width: 150px; ">
+  <a href="/profile">Profile</a>
+  <a href="/reporting">Calorie Reporting</a>
+</div>
+
 &nbsp;&nbsp;&nbsp;
 <span class="menu_link">
-<a href="/search/user" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'anylinkmenu3')">SEARCH</a>
+<a href="/search/user" onMouseover="dropdownmenu(this, event, 'anylinkmenu3')">SEARCH</a>
 </span>
 <div id="anylinkmenu3" class="anylinkcss" style="width: 150px; ">
   <a href="/search/user">Users</a>

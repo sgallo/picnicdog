@@ -8,6 +8,22 @@ class MyadminController < ApplicationController
   end
 
 
+  def meal_compute
+
+    meals = Meal.find(:all)
+    meals.each do |meal|
+        meal_nut_list = meal.get_nutrition_label
+        if !meal_nut_list.empty?
+          meal.fat = meal_nut_list["FAT"].value
+          meal.calories = meal_nut_list["ENERC_KCAL"].value
+          meal.protein = meal_nut_list["PROCNT"].value
+          meal.carbs = meal_nut_list["CHOCDF"].value
+          meal.save
+        end
+    end
+
+  end
+
   def email
      @emails = Email.paginate(:all, :page => params[:page], :per_page => 500 )
   end

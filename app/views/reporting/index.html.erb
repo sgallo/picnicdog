@@ -1,20 +1,28 @@
- <div class="home_top">
-  <div class="what">Calorie Reporting</div>
-  <br />
-  <table>
-    <tr>
-      <td colspan="2">
-      <%= form_tag "/reporting" %>
-      <%= calendar_date_select_tag "start_date", Date.today %> <%= calendar_date_select_tag "end_date", Date.today %>
+<div class="home_top">
+<div class="what">Calorie Reporting</div>
+<br />
+<table>
+<tr>
+  <td colspan="2">
+    <%= form_tag "/reporting" %>
+    <font color="white">
+    <table>
+      <tr><td>Start Date:</td><td>End Date:</td></tr>
+      <tr><td><%= calendar_date_select_tag "start_date", Date.today %></td><td><%= calendar_date_select_tag "end_date", Date.today %></td></tr>
+    </table>
+     </font>
+    <br>
+  </td>
+  <td align="right"><%= submit_tag "Submit", {:style => "width:100px;"} %></td>
+  </form>
+</tr>
+</table>
+</div>
 <br>
+<div id="calorie_list">
+  <% if @report_list != nil %>
+    Total Nutrients for date range:
     
-      </td>
-     </tr>
-    <tr><td>
-          </td>
-        <td align="right"><%= submit_tag "Submit", {:style => "width:100px;"} %></td>
-        </form>
-
-    </tr>
-  </table>
+    <%= render :partial => "report_list", :locals => {:report_list => @report_list} %>
+  <% end %>
 </div>

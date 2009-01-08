@@ -1,0 +1,14 @@
+
+<% if meal_foods != nil %>
+<font style="font-size:11px">
+    <table cellpadding="0">
+	<% meal_foods.each do |food| %>
+	<tr>
+	<td valign="top"><%= food.quantity %></td><td width="5"></td><td valign="top"><%= Weight.find(food.weight_id).msre_desc %>(s)</td><td width="10"></td><td valign="top"> <%= Food.find(food.food_id).description.gsub('"', '') %></td>
+    <tr><td colspan="6"><hr></td></tr>
+	</tr>
+	<% end %>
+	</table>
+</font>
+
+<% end %>
